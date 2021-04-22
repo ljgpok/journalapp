@@ -27,7 +27,7 @@ Navbar.propTypes = {
 
 Navbar.defaultProps = {
     title: 'Journal App',
-    icon: 'fas fa-id-card-alt',
+    icon: 'fas fa-book',
 }
 
 export default Navbar
