@@ -8,7 +8,7 @@ import JournalState from './context/journal/JournalState';
 
 const App = () => {
   return (
-    <ContactState>
+    <JournalState>
       <Router>
         <Fragment>
           <Navbar />
@@ -20,7 +20,7 @@ const App = () => {
           </div>
         </Fragment>
       </Router>
-    </ContactState>
+    </JournalState>
   );
 }
 
