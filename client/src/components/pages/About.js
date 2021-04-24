@@ -1,14 +1,20 @@
-import React from 'react'
+import React from 'react';
+import Journals from '../journals/Journals';
+import JournalForm from '../journals/JournalForm';
+import JournalFilter from '../journals/JournalFilter';
 
-const About = () => {
-    return (
-        <div>
-            <h1>About this App</h1>
-            <p className="my-1">
-                This is a fullstack app about create journals
-            </p>
-        </div>
-    )
-}
+const Home = () => {
+  return (
+    <div className='grid-2'>
+      <div>
+        <JournalForm />
+      </div>
+      <div>
+        <JournalFilter />
+        <Journals />
+      </div>
+    </div>
+  );
+};
 
-export default About
+export default Home;
