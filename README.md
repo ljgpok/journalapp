@@ -4,11 +4,16 @@
 
 This app was created for the Chingu Voyage 30 pre-work. More Information: Tier 3 solo project https://github.com/chingu-voyages/soloproject-tier3-journal-app
 
+## Live Link: https://murmuring-everglades-98052.herokuapp.com/ 
 ## How to run
 - clone the repo
 - npm install
 - cd client && npm install
 - cd ..
+- create default.json|production.json and add {
+    "mongoURI": "",
+    "jwtSecret": ""
+  }
 - npm run dev
 
 ## Tech Used / Dependencies
