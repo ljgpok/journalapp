@@ -6,7 +6,7 @@ const JournalItem = ({ journal }) => {
   const journalContext = useContext(JournalContext);
   const { deleteJournal, setCurrent, clearCurrent } = journalContext;
 
-  const { _id, name, email, phone, type } = journal;
+  const { _id, name, title, body } = journal;
 
   const onDelete = () => {
     deleteJournal(_id);
@@ -16,26 +16,18 @@ const JournalItem = ({ journal }) => {
   return (
     <div className='card bg-light'>
       <h3 className='text-primary text-left'>
-        {name}{' '}
-        <span
-          style={{ float: 'right' }}
-          className={
-            'badge ' +
-            (type === 'professional' ? 'badge-success' : 'badge-primary')
-          }
-        >
-          {type.charAt(0).toUpperCase() + type.slice(1)}
-        </span>
+        {title}{' '}
+
       </h3>
       <ul className='list'>
-        {email && (
+        {name && (
           <li>
-            <i className='fas fa-envelope-open' /> {email}
+            <i className='fas fa-envelope-open' /> {name}
           </li>
         )}
-        {phone && (
+        {body && (
           <li>
-            <i className='fas fa-phone' /> {phone}
+            <i className='fas fa-body' /> {body}
           </li>
         )}
       </ul>

@@ -12,21 +12,19 @@ const JournalForm = () => {
     } else {
       setJournal({
         name: '',
-        email: '',
-        phone: '',
-        type: 'personal'
+        title: '',
+        body: ''
       });
     }
   }, [journalContext, current]);
 
   const [journal, setJournal] = useState({
     name: '',
-    email: '',
-    phone: '',
-    type: 'personal'
+    title: '',
+    body: ''
   });
 
-  const { name, email, phone, type } = journal;
+  const { name, title, body } = journal;
 
   const onChange = e =>
     setJournal({ ...journal, [e.target.name]: e.target.value });
@@ -48,50 +46,34 @@ const JournalForm = () => {
   return (
     <form onSubmit={onSubmit}>
       <h2 className='text-primary'>
-        {current ? 'Edit Journal' : 'Add Journal'}
+        {current ? 'Edit Note' : 'Add Note'}
       </h2>
+
       <input
         type='text'
-        placeholder='Name'
+        placeholder='Title'
+        name='title'
+        value={title}
+        onChange={onChange}
+      />
+      <textarea
+        type='text'
+        placeholder='Body'
+        name='body'
+        value={body}
+        onChange={onChange}
+      />
+      <input
+        type='title'
+        placeholder='Author Name'
         name='name'
         value={name}
         onChange={onChange}
       />
-      <input
-        type='email'
-        placeholder='Email'
-        name='email'
-        value={email}
-        onChange={onChange}
-      />
-      <input
-        type='text'
-        placeholder='Phone'
-        name='phone'
-        value={phone}
-        onChange={onChange}
-      />
-      <h5>Journal Type</h5>
-      <input
-        type='radio'
-        name='type'
-        value='personal'
-        checked={type === 'personal'}
-        onChange={onChange}
-      />{' '}
-      Personal{' '}
-      <input
-        type='radio'
-        name='type'
-        value='professional'
-        checked={type === 'professional'}
-        onChange={onChange}
-      />{' '}
-      Professional
       <div>
         <input
           type='submit'
-          value={current ? 'Update Journal' : 'Add Journal'}
+          value={current ? 'Update Note' : 'Add Note'}
           className='btn btn-primary btn-block'
         />
       </div>

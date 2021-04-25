@@ -1,20 +1,11 @@
-import React from 'react';
-import Journals from '../journals/Journals';
-import JournalForm from '../journals/JournalForm';
-import JournalFilter from '../journals/JournalFilter';
+import React from 'react'
 
-const Home = () => {
+function About() {
   return (
-    <div className='grid-2'>
-      <div>
-        <JournalForm />
-      </div>
-      <div>
-        <JournalFilter />
-        <Journals />
-      </div>
+    <div>
+      <h1>This is soloproject-tier3 (journal-app) project from chingu io</h1>
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default About

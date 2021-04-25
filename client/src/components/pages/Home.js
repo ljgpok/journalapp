@@ -1,13 +1,20 @@
-import React from 'react'
+import React from 'react';
+import Journals from '../journals/Journals';
+import JournalForm from '../journals/JournalForm';
+import JournalFilter from '../journals/JournalFilter';
 
 const Home = () => {
-    return (
-        <div>
-            <h1>
-                Home page
-            </h1>
-        </div>
-    )
-}
+  return (
+    <div className='grid-2'>
+      <div>
+        <JournalForm />
+      </div>
+      <div>
+        <JournalFilter />
+        <Journals />
+      </div>
+    </div>
+  );
+};
 
-export default Home
+export default Home;

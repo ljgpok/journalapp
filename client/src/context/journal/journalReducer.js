@@ -64,7 +64,7 @@ export default (state, action) => {
         ...state,
         filtered: state.journals.filter(journal => {
           const regex = new RegExp(`${action.payload}`, 'gi');
-          return journal.name.match(regex) || journal.email.match(regex);
+          return journal.name.match(regex) || journal.title.match(regex)  || journal.body.match(regex);
         })
       };
     case CLEAR_FILTER:

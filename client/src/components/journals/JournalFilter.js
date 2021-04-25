@@ -26,7 +26,7 @@ const JournalFilter = () => {
       <input
         ref={text}
         type='text'
-        placeholder='Filter Journals...'
+        placeholder='Filter Note...'
         onChange={onChange}
       />
     </form>
