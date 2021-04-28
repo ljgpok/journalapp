@@ -10,10 +10,7 @@ This app was created for the Chingu Voyage 30 pre-work. More Information: Tier 3
 - npm install
 - cd client && npm install
 - cd ..
-- create default.json|production.json and add {
-    "mongoURI": "",
-    "jwtSecret": ""
-  }
+- rename sample.json to default.json or production.json and add your mongodb url
 - npm run dev
 
 ## Tech Used / Dependencies
